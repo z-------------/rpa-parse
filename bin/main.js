@@ -5,7 +5,7 @@ const parseRPA = require("../lib/parse-rpa.js");
 
 let args = require("minimist")(process.argv.slice(2));
 
-let usageString = "Usage: rpa-parse <filename> [<output dir>] [--auto-ext]";
+let usageString = "Usage: rpa-parse <filename> [<output dir>] [--auto-ext|--force-ext=<ext>]";
 
 if (args._.length === 0 || args.h || args.help) {
   console.log(usageString);
@@ -28,5 +28,8 @@ if (args._.length === 0 || args.h || args.help) {
     outputDirname = process.cwd();
   }
 
-  parseRPA(targetFileName, outputDirname, !!args["auto-ext"]);
+  parseRPA(targetFileName, outputDirname, {
+    autoExt: args["auto-ext"],
+    forceExt: args["force-ext"]
+  });
 }
