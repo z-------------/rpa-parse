@@ -1,6 +1,6 @@
 {
   "name": "rpa-parse",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Node.js parser/unarchiver for Ren'Py's RPA files",
   "main": "lib/parse-rpa.js",
   "bin": {
@@ -17,5 +17,9 @@
   ],
   "author": "Zachary Guard",
   "license": "MIT",
-  "preferGlobal": "true"
+  "preferGlobal": "true",
+  "dependencies": {
+    "file-type": "^7.4.0",
+    "minimist": "^1.2.0"
+  }
 }
