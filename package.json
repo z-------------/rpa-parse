@@ -1,7 +1,7 @@
 {
   "name": "rpa-parse",
   "version": "0.0.1",
-  "description": "A Node.js parser for Ren'Py's RPA files",
+  "description": "A Node.js parser/unarchiver for Ren'Py's RPA files",
   "main": "lib/parse-rpa.js",
   "bin": {
     "rpa-parse": "bin/main.js"
